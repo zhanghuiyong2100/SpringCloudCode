@@ -31,7 +31,7 @@ public class HelloController {
     public String index(@RequestParam String name) {
         List<String> clientServices = client.getServices();
         logger.info("hello接口" + clientServices +"端口号："+port);
-        return "This is Eureka,Hello+"+name+";改接口的端口号是"+port;
+        return "This is Eureka,Hello,"+name+";该接口的端口号是"+port;
     }
 
 

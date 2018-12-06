@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @描述: 消费服务测试Rest接口
  **/
 @RestController
-public class HelloRestController {
+public class ConsumerRestController {
 
     @Autowired
     HelloService helloService;
