@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -27,10 +28,10 @@ public class HelloController {
     private String port;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String index() {
+    public String index(@RequestParam String name) {
         List<String> clientServices = client.getServices();
         logger.info("hello接口" + clientServices +"端口号："+port);
-        return "This is Eureka,Hello";
+        return "This is Eureka,Hello+"+name+";改接口的端口号是"+port;
     }
 
 

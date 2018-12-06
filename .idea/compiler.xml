@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-hello" />
         <module name="eureka-server" />
+        <module name="ribbon-consumer" />
       </profile>
     </annotationProcessing>
   </component>
