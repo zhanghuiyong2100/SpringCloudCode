@@ -11,4 +11,7 @@
 2018-12-06
     1.创建eureka-hello作为服务提供者（即生产者）
     2.为了进一步的高可用性,在eureka-server项目中添加peer1和peer2的配置文件，并分别启动，以达到类似集群的效果
+    3.创建服务消费者ribbon项目;
+    4.部分eureka-hello修改组件为eureka-client;
+    5.修改配置文件的编码格式为UTF-8
 ```
