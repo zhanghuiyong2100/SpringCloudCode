@@ -1,13 +1,11 @@
 package com.springcloud.eurekahello.web.restcontroller;
 
+import com.springcloud.eurekahello.domain.User;
 import com.sun.istack.internal.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,11 +25,11 @@ public class HelloController {
     @Value("${server.port}")
     private String port;
 
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String index(@RequestParam String name) {
+    @RequestMapping(value = "/hello",method = RequestMethod.POST)
+    public String index(@RequestBody User user) {
         List<String> clientServices = client.getServices();
         logger.info("hello接口" + clientServices +"端口号："+port);
-        return "This is Eureka,Hello,"+name+";该接口的端口号是"+port;
+        return "This is Eureka,Hello,"+user.getName()+";该接口的端口号是"+port;
     }
 
 

@@ -2,7 +2,8 @@ package com.springcloud.ribbonconsumer.web.restcontroller;
 
 import com.springcloud.ribbonconsumer.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +18,7 @@ public class ConsumerRestController {
     @Autowired
     HelloService helloService;
 
-    @GetMapping(value = "/hello")
+    @RequestMapping(value = "/hello",method = RequestMethod.POST)
     public String index(@RequestParam String name) {
         return helloService.helloService(name);
     }

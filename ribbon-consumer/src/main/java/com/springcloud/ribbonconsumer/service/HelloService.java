@@ -1,8 +1,12 @@
 package com.springcloud.ribbonconsumer.service;
 
+import com.springcloud.ribbonconsumer.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import java.net.URI;
 
 /**
  * @author 章辉勇
@@ -13,10 +17,67 @@ import org.springframework.web.client.RestTemplate;
 public class HelloService {
     @Autowired
     RestTemplate restTemplate;
+    User user = new User();
 
-    public String helloService(String name){
+    public String helloService(String name) {
+//        String getForEntity = getForEntity(name);
+//        String getForObject = getForObject(name);
+//        URI postForLocation = postForLocation(name);
+        String postForObject = fostForObject(name);
+        return "";
+    }
+
+    private String fostForObject(String name) {
+        user.setName(name);
+        /**
+         * <p>getForObject 函数说明  </p>
+         *
+         * @param String url 请求的路径
+         * @param @Nullable Object request  post请求的参数
+         * @param Class<T> responseType  返回结果集的类型，可为String或者实体
+         * @param Object... uriVariables  可略，附加在url路径后面的参数，替换{1}中的数据
+         * @return uri
+         * @其它信息
+         */
+        String postForObject = restTemplate.postForObject("http://EUREKA-SERVICE-HELLO/hello", user, String.class);
+        return postForObject;
+    }
+
+    private URI postForLocation(String name) {
+
+        user.setName(name);
+        URI uri = restTemplate.postForLocation("http://EUREKA-SERVICE-HELLO/hello", user, String.class);
+        return uri;
+    }
+
+    private String getForObject(String name) {
+        /**
+         * <p>getForObject 函数说明  </p>
+         *
+         * @param String url 请求的路径
+         * @param Class<T> responseType  返回结果集的类型，可为String或者实体
+         * @param Object... uriVariables  可略，附加在url路径后面的参数，替换{1}中的数据
+         * @return
+         * @其它信息
+         */
         String object = restTemplate.getForObject("http://EUREKA-SERVICE-HELLO/hello?name=" + name, String.class);
-        System.out.println(object);
         return object;
     }
+
+    private String getForEntity(String name) {
+        /**
+         * <p>getForEntity函数说明  </p>
+         *
+         * @param String url 请求的路径
+         * @param Class<T> responseType  返回结果集的类型，可为String或者实体
+         * @param Object... uriVariables  可略，附加在url路径后面的参数，替换{1}中的数据
+         * @return
+         * @其它信息
+         */
+        ResponseEntity<String> entity = restTemplate.getForEntity("http://EUREKA-SERVICE-HELLO/hello?name={1}", String.class, "上善若水");
+        String entityBody = entity.getBody();
+        return entityBody;
+    }
+
+
 }

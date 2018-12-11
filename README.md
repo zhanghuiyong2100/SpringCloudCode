@@ -17,4 +17,8 @@
 2018-12-10
     1.对项目的一些内容进行了更好的了解，代码方面没有做更多的改动
     2.写了项目文档一篇：http://note.youdao.com/noteshare?id=bf22e8c2b01bff5bacced20a33229d9a&sub=656C2FD7093642CEACC6D9010D2D8F8C
+2018-12-11
+    1.对ribbon有了理论的了解
+    2.代码方面主要添加了ribbon-consumer项目中使用restTemplate的请求方式，主要是get,post;其中post请求需要注意的是发送需用使object对象。
+    3.ribbon解析同步书籍文章：http://note.youdao.com/noteshare?id=d3cad9ceaf5741208445e5ad1442465e&sub=50C8BFC252B84B20ACED4E61888D2147
 ```
