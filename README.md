@@ -14,4 +14,7 @@
     3.创建服务消费者ribbon项目;
     4.部分eureka-hello修改组件为eureka-client;
     5.修改配置文件的编码格式为UTF-8
+2018-12-10
+    1.对项目的一些内容进行了更好的了解，代码方面没有做更多的改动
+    2.写了项目文档一篇：http://note.youdao.com/noteshare?id=bf22e8c2b01bff5bacced20a33229d9a&sub=656C2FD7093642CEACC6D9010D2D8F8C
 ```
