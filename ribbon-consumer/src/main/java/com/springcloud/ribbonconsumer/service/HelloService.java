@@ -1,5 +1,6 @@
 package com.springcloud.ribbonconsumer.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.springcloud.ribbonconsumer.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,15 +17,26 @@ import java.net.URI;
 @Service
 public class HelloService {
     @Autowired
-    RestTemplate restTemplate;
-    User user = new User();
+    private RestTemplate restTemplate;
 
+    private User user = new User();
+
+    /**
+     * 该注解对该方法创建了熔断器的功能，并指定了fallbackMethod熔断方法helloError，
+     * 熔断方法直接返回了一个字符串
+     */
+    @HystrixCommand(fallbackMethod = "helloError")
     public String helloService(String name) {
 //        String getForEntity = getForEntity(name);
 //        String getForObject = getForObject(name);
 //        URI postForLocation = postForLocation(name);
         String postForObject = fostForObject(name);
-        return "";
+        return postForObject;
+    }
+
+    private String helloError(String name){
+        return "Hello接口调入错误,传入数据"+name;
+
     }
 
     private String fostForObject(String name) {

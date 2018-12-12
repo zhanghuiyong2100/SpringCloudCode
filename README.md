@@ -21,4 +21,9 @@
     1.对ribbon有了理论的了解
     2.代码方面主要添加了ribbon-consumer项目中使用restTemplate的请求方式，主要是get,post;其中post请求需要注意的是发送需用使object对象。
     3.ribbon解析同步书籍文章：http://note.youdao.com/noteshare?id=d3cad9ceaf5741208445e5ad1442465e&sub=50C8BFC252B84B20ACED4E61888D2147
+2018-12-12
+    0.今日知识点关键词汇:Hystrix,断路由,雪崩
+    1.开启了断路由Hystrix的学习
+    2.在ribbon-consumer项目中天下netfix-hystrix的依赖，并进行相关的配置,值得注意的是请求时间过长引起的保护机制
+    3.相关内容的有道云笔记:http://note.youdao.com/noteshare?id=0d720db065bc0c3db2553be4fb30c267&sub=EC7C1BC7B7DC452A8B99A52CD4E448DA
 ```
