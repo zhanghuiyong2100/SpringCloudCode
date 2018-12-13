@@ -25,11 +25,25 @@ public class HelloController {
     @Value("${server.port}")
     private String port;
 
-    @RequestMapping(value = "/hello",method = RequestMethod.POST)
+    @RequestMapping(value = "/hello", method = RequestMethod.POST)
     public String index(@RequestBody User user) {
         List<String> clientServices = client.getServices();
-        logger.info("hello接口" + clientServices +"端口号："+port);
-        return "This is Eureka,Hello,"+user.getName()+";该接口的端口号是"+port;
+        logger.info("hello接口" + clientServices + "端口号：" + port);
+        return "This is Eureka,Hello," + user.getName() + ";该接口的端口号是" + port;
+    }
+
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    public String getFast(@RequestParam String name) {
+        List<String> clientServices = client.getServices();
+        logger.info("get接口" + clientServices + "端口号：" + port);
+        return "这里是eureka-Hello服务，get请求接口,接收数据是" + name + ";该接口的端口号是" + port;
+    }
+
+    @RequestMapping(value = "/post", method = RequestMethod.POST)
+    public String PostFast(@RequestParam String name) {
+        List<String> clientServices = client.getServices();
+        logger.info("post接口" + clientServices + "端口号：" + port);
+        return "这里是eureka-Hello服务，post请求接口,接收数据是" + name + ";该接口的端口号是" + port;
     }
 
 
