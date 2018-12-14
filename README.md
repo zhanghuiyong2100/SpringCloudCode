@@ -11,8 +11,7 @@
 1. 上传到GitHub,并新建README.MD文件，idea中安装Markdown Navigator便于编辑
 2. 确定父工程管理子工程,创建父工程项目,经过对比,最后选择springBoot版本为2.0.7，springCloud版本为Finchley.SR2
 3. 创建子项目eureka-server,作为服务注册中心
-4. 补充父项目的文档说明:[1 创建父工程项目springcloud-project](http://note.youdao.com/noteshare?id=ef82aa4473d6b14f5a43a7ffe070bb88&sub=8FE577EF990943B9A0FA7F8EA4A56E4B);
-5. 补充文档:[2 创建服务管理项目Eureka](http://note.youdao.com/noteshare?id=bf22e8c2b01bff5bacced20a33229d9a&sub=656C2FD7093642CEACC6D9010D2D8F8C);
+4. 补充父项目的文档说明:[1 创建父工程项目springcloud-project](http://note.youdao.com/noteshare?id=ef82aa4473d6b14f5a43a7ffe070bb88&sub=8FE577EF990943B9A0FA7F8EA4A56E4B)
 
 #### 2018-12-06 服务提供以及消费者ribbon
 
