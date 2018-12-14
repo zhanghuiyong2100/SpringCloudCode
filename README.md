@@ -44,3 +44,9 @@
 #### 2018-12-13 路由网关zuul
 0. 今日知识点关键词汇:Zuul,路由网关
 1. 创建zuul-service项目
+
+#### 2018-12-14 zuul过滤
+0. 今日知识点关键词汇:过滤
+1. 昨天由于公司的项目没有继续下去,所以今天继续完善项目，添加了拦截器的功能MyFilter.java类
+2. 相关内容笔记:[第五篇  路由网关(zuul)](http://note.youdao.com/noteshare?id=5a2fd632e830bff42958d8191ab6ca0f&sub=EF6F617BFE954F1582AD3A8D21C0CD22)
+

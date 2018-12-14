@@ -18,6 +18,7 @@
         <module>eureka-hello</module>
         <module>feign-service</module>
         <module>ribbon-consumer</module>
+        <module>zuul-service</module>
     </modules>
 
     <!--设定springBoot版本为2.0.7.RELEASE-->
