@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @创建时间 2018年12月12日
  * @描述: feign接口
  **/
-@FeignClient(value = "EUREKA-SERVICE-HELLO")
+@FeignClient(value = "EUREKA-SERVICE-HELLO",fallback =SchedualServiceHelloHystric.class )
 public interface SchedualServiceHello {
 
     /**

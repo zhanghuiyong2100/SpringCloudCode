@@ -10,6 +10,7 @@
         <module name="eureka-server" />
         <module name="feign-service" />
         <module name="ribbon-consumer" />
+        <module name="zuul-service" />
       </profile>
     </annotationProcessing>
   </component>

@@ -40,3 +40,7 @@
 4. 根据博文,完善服务消费Feign功能,并且发现貌似好像还更好用一点
 5. 创建feign-service项目，并进行了相应的get,post请求，一点心得：post中接收数据最好一致
 6. 相关内容有道云笔记：[第三篇 服务消费者（Feign）](http://note.youdao.com/noteshare?id=7ca6a23f108e607c56674165657d7674&sub=E98F372DC51A462CBD1A39EC044F194D)
+
+#### 2018-12-13 路由网关zuul
+0. 今日知识点关键词汇:Zuul,路由网关
+1. 创建zuul-service项目
