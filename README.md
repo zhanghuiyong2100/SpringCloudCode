@@ -46,10 +46,17 @@
 0. 今日知识点关键词汇:Zuul,路由网关
 1. 创建zuul-service项目
 
-#### 2018-12-14 zuul过滤
+#### 2018-12-14 zuul过滤,config配置中心
 0. 今日知识点关键词汇:过滤,config,动态配置，git
 1. 昨天由于公司的项目没有继续下去,所以今天继续完善项目，添加了拦截器的功能MyFilter.java类
 2. 相关内容笔记:[第五篇  路由网关(zuul)](http://note.youdao.com/noteshare?id=5a2fd632e830bff42958d8191ab6ca0f&sub=EF6F617BFE954F1582AD3A8D21C0CD22)
 3. 创建config-server项目
 4. 创建config-client项目
+5. 相关内容笔记：[第六篇 分布式配置中心(Spring Cloud Config)](http://note.youdao.com/noteshare?id=aff016c931f7981565e252e19cf8ff26&sub=677F69F16646443B8F6F4A7EA2B9795C)
 
+#### 2018-12-17 高可用分布式配置中心(config,eureka)
+0. 今日知识点关键词汇:高可用，分布式配置中心
+1. 对config-server和config-client项目进行拓展,将负责注册到eureka-server中提高 高可用性
+2. 同步文章:[第七篇 高可用的分布式配置中心(Spring Cloud Config)(Finchley版本)](http://note.youdao.com/noteshare?id=c223b45a91e7b00f3fb69710db5de175&sub=178085655B7C468D92324C0ADE86B3C5)
+3. 暂时放弃博客的继续学习，先进行书籍的理论学习,之后再进行实战
+4. springCloud学习暂时中断,没有实战项目的学起来并没有很多的效果,并且理论过于枯燥,所以理论学习展示中断,之后如果继续springCloud学习的话会用一个项目一起理解实践
